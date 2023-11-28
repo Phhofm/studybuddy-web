@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'StudyBuddy — Students best friend',
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,32 +25,46 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Visit Webseite',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:external-link',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Visit Gitlab Code Repo', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 3.0</span> + Tailwind CSS
+      StudyBuddy
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 3.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">StudyBuddy</span> is a free, customizable, open sourced, mobile-friendly and production-ready PWA (progressive web application). </span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">StudyBuddy: A Student's best friend.</span>
+       Suitable for Universities and Educational Institutions throughout Switzerland: Provide the Content your Students need.
     </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Mm6ATyzAmYU?si=aOQ6q1twvKUxrICt"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full"
+        >
+        </iframe>
+      </div>
+    </Fragment>
+
   </Hero>
 
   <!-- Note Widget ******************* -->
+
+
 
   <Note />
 
@@ -59,37 +73,37 @@ const metadata = {
   <Features
     id="features"
     tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="What you get with StudyBuddy"
+    subtitle="One of the most professional and comprehensive progressive web apps in use by the University of Zuerich. Developed by the RWF E-Learning Team."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'App Store Independent',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Updated within minutes  - without waiting weeks for approval from any app store. No forced technical requirements. Installable anywhere.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Newest Frameworks',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Made as a PWA with Vite, VueJS 3, Ionic 6, and your mother.',
         icon: 'tabler:components',
       },
       {
         title: 'Best Practices',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'Only the best developers worked on this project.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Excellent Speed',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Speed, speed, speed, what more can I say?',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Accessible',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "Fulfilling a Students dreams of accessible content, handily ready with a touch of a button.",
         icon: 'tabler:arrows-right-left',
       },
       {
@@ -105,21 +119,21 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Inside a Master Programmers mind"
+    title="StudyBuddy: Fun Meets Functionality!"
     items={[
       {
-        title: 'Built on top of Astro 3.0',
+        title: 'Built on top of the power of Vite',
         description:
           'Benefiting from the performance and developer-friendly features of this modern static site generator.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Standing on the shoulders of the Ionic Giants',
         description:
           'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Cross-plattform compatibility',
         description:
           'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
       },
@@ -131,7 +145,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
+       Gain immortality and be glorified by students forever
     </Fragment>
 
     <Fragment slot="bg">

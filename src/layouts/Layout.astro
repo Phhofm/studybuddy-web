@@ -12,12 +12,6 @@ import SiteVerification  from "~/components/common/SiteVerification.astro"
 import Analytics  from "~/components/common/Analytics.astro"
 import BasicScripts from '~/components/common/BasicScripts.astro';
 
-import type { MetaData as MetaDataType } from '~/types';
-
-export interface Props {
-  metadata?: MetaDataType;
-}
-
 const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
 ---
