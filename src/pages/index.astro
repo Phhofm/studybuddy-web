@@ -12,6 +12,10 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import { Image } from 'astro:assets';
+//import mobileDemo from '../assets/images/mobile_demo_720p.webp'
+//import mobileDemo from '../assets/images/mobile_demo_720p.avif'
+
 const metadata = {
   title: 'StudyBuddy — Students best friend',
   ignoreTitleTemplate: true,
@@ -26,7 +30,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Visit Webseite',
-        href: 'https://github.com/onwidget/astrowind',
+        href: 'https://rc-lha.rwi.uzh.ch/',
         target: '_blank',
         icon: 'tabler:external-link',
       },
@@ -39,17 +43,17 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">StudyBuddy</span> is a free, open sourced, and mobile-friendly progressive web app that gives students access to all the content from their courses in one place. </span
+        <span class="font-semibold text-blue-600">StudyBuddy</span> is a free, open sourced, and mobile-friendly progressive web app that gives students access to all the content from their courses in one place. </span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">StudyBuddy: A Student's best friend.</span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">StudyBuddy: One-stop PWA for University lecture content.</span>
        Suitable for all Universities in Switzerland, one app for all their chairs to provide the content their students need.
     </Fragment>
 
     <Fragment slot="image">
-      <h1 class="mb-4 text-center">TODO: Crop Mobile Demo Video with davinci resolve and also export in acceptable resolution and quality in the sense of that it needs to not be too big since it loads with the website, convert to animated webp, and add it here instead of this image:</h1>
-      <img src="https://mathiasbynens.be/demo/animated-webp-supported.webp" alt="Computer man" style="width:20%;height:20%;" class="mx-auto mb-4">
+     <img src="/images/mobile_demo_720p.avif" alt="PWA Demo" class="mx-auto">
+     <p class="mx-auto text-center text-xs">PWA Demo</p>
 
-
+<!-- 
       <p class="mb-4 text-center">Or we embed a youtube video which will use less bandwidth but needs to be clicked to play:</p>
       <div class="relative h-0 pb-[56.25%]">
         <iframe
@@ -62,7 +66,7 @@ const metadata = {
           class="absolute top-0 left-0 w-full h-full"
         >
         </iframe>
-      </div>
+      </div>-->
     </Fragment>
 
   </Hero>
