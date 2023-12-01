@@ -2,17 +2,17 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+//import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+//import Features2 from '~/components/widgets/Features2.astro';
+//import Steps from '~/components/widgets/Steps.astro';
+//import Content from '~/components/widgets/Content.astro';
+//import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+//import FAQs from '~/components/widgets/FAQs.astro';
+//import Stats from '~/components/widgets/Stats.astro';
+//import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import { Image } from 'astro:assets';
+//import { Image } from 'astro:assets';
 //import mobileDemo from '../assets/images/mobile_demo_720p.webp'
 //import mobileDemo from '../assets/images/mobile_demo_720p.avif'
 
@@ -26,10 +26,11 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    class:list={'mb-0'}
     actions={[
       {
         variant: 'primary',
-        text: 'Visit Webseite',
+        text: 'Visit Live Demo',
         href: 'https://rc-lha.rwi.uzh.ch/',
         target: '_blank',
         icon: 'tabler:external-link',
@@ -37,40 +38,57 @@ const metadata = {
       { text: 'Visit Gitlab Code Repo', href: '#features' },
     ]}
   >
-    <Fragment slot="title">
-      StudyBuddy
-    </Fragment>
+    <Fragment slot="title">StudyBuddy</Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold text-blue-600">StudyBuddy</span> is a free, open sourced, and mobile-friendly progressive web app that gives students access to all the content from their courses in one place. </span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">StudyBuddy: One-stop PWA for University lecture content.</span>
-       Suitable for all Universities in Switzerland, one app for all their chairs to provide the content their students need.
+        <span class="font-semibold text-blue-600">StudyBuddy</span> is a free, open sourced, and mobile-friendly
+        progressive web app that gives students access to all the content from their courses in one place.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"
+        >StudyBuddy: One-stop PWA for University lecture content.</span
+      ><br>
+       Suitable for all Universities in Switzerland, one app for all their chairs to provide the content their students
+      need.
     </Fragment>
-
-    <Fragment slot="image">
-     <img src="/images/mobile_demo_720p.avif" alt="PWA Demo" class="mx-auto">
-     <p class="mx-auto text-center text-xs">PWA Demo</p>
-
-<!-- 
-      <p class="mb-4 text-center">Or we embed a youtube video which will use less bandwidth but needs to be clicked to play:</p>
-      <div class="relative h-0 pb-[56.25%]">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Mm6ATyzAmYU?si=aOQ6q1twvKUxrICt"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          allowfullscreen
-          class="absolute top-0 left-0 w-full h-full"
-        >
-        </iframe>
-      </div>-->
-    </Fragment>
-
   </Hero>
 
+  <section class="mx-auto text-center">
+    <div class="mb-24">
+      <h1 class="text-5xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+        A Home for lecture content
+      </h1>
+        <span class="font-semibold text-blue-600">Chairs</span> can <span class="font-semibold text-blue-300"
+          >create and moderate content</span
+        > for their lectures. <br /> Choose which of your content is publicly accessible or only to logged in students
+        through the <span class="font-semibold text-blue-300">protection feature</span>. <br /> Work privately on your
+        content and release when ready thorugh the <span class="font-semibold text-blue-300">publish feature</span>. <br
+        /> Upload your slides and integrate them through the <span class="font-semibold text-blue-300">PDF Manager</span
+        >. <br /> Embed videos from external ressources to integrate lecture <span class="font-semibold text-blue-300"
+          >Podcasts</span
+        >. <br /> Embed ich interactive content like <span class="font-semibold text-blue-300"
+          >Quizzes, Flashcards, Questionnaires</span
+        > through <a href="https://h5p.org/content-types-and-applications" class="underline font-semibold text-blue-600"
+          >h5p</a
+        >. <br />Send <span class="font-semibold text-blue-300">Push Notifications</span> to users of the app.
+      <img src="/images/chair-create-content-demo.avif" alt="PWA Demo" class="mx-auto mt-6 mb-2" />
+      <p class="mx-auto text-center text-xs">Chair Content Creation Demo</p>
+    </div>
+    <div>
+      <h1 class="text-5xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+        All in one place
+      </h1>
+      <span class="hidden sm:inline">
+        <span class="font-semibold text-blue-600">Students</span> can access the content of all their lectures in <span
+          class="font-semibold text-blue-300">one single place</span
+        > . <br /> Simply install StudyBuddy on <any class="font-semibold text-blue-300">any mobile device</any> with
+        your webbrowser. <br /> Log in with your <span class="font-semibold text-blue-300">already existing Edu-ID</span
+        > to additionally get access to all protected ressources:</span
+      >
+      <img src="/images/mobile_demo_720p.avif" alt="PWA Demo" class="mx-auto mt-6 mb-2" />
+      <p class="mx-auto text-center text-xs">Student PWA Demo</p>
+    </div>
+  </section>
   <!-- Features Widget *************** -->
 
   <Features
@@ -81,8 +99,7 @@ const metadata = {
     items={[
       {
         title: 'Mobile PWA',
-        description:
-          'No App Store, no problem. This app can be installed on any mobile device with a web browser.',
+        description: 'No App Store, no problem. This app can be installed on any mobile device with a web browser.',
         icon: 'tabler:brand-appstore',
       },
       {
@@ -106,7 +123,7 @@ const metadata = {
       {
         title: 'One Admin Account',
         description:
-          "Manage your chairs with ease using our web interface. Create, update or delete chairs as you wish with just a few clicks.",
+          'Manage your chairs with ease using our web interface. Create, update or delete chairs as you wish with just a few clicks.',
         icon: 'tabler:user-check',
       },
       {
@@ -118,7 +135,9 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!--
+
+  <a!-- Content Widget **************** --a>
 
   <Content
     isReversed
@@ -156,7 +175,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <a!-- Content Widget **************** --a>
 
   <Content
     isAfterContent
@@ -193,7 +212,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <a!-- Content Widget **************** --a>
 
   <Content
     isReversed
@@ -231,7 +250,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+  <a!-- Steps Widget ****************** --a>
 
   <Steps
     title="Get your dream website up and running in no time with AstroWind."
@@ -265,7 +284,7 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <a!-- Features2 Widget ************** --a>
 
   <Features2
     title="Most used widgets"
@@ -329,7 +348,7 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <a!-- HighlightedPosts Widget ******* --a>
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
@@ -339,7 +358,7 @@ const metadata = {
                 `}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <a!-- FAQs Widget ******************* --a>
 
   <FAQs
     title="Frequently Asked Questions"
@@ -380,7 +399,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
+  <a!-- Stats Widget ****************** --a>
 
   <Stats
     stats={[
@@ -391,7 +410,7 @@ const metadata = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <a!-- CallToAction Widget *********** --a>
 
   <CallToAction
     actions={[
@@ -413,4 +432,5 @@ const metadata = {
       waste more time! :P
     </Fragment>
   </CallToAction>
+-->
 </Layout>
