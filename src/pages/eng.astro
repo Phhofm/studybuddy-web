@@ -1,0 +1,143 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = {
+  title: 'StudyBuddy — Students best friend',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    class:list={'mb-0'}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Visit Live Demo',
+        href: 'https://rc-lha.rwi.uzh.ch/',
+        target: '_blank',
+        icon: 'tabler:external-link',
+      },
+      { text: 'Visit Gitlab Code Repo', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">StudyBuddy</Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold text-blue-600">StudyBuddy</span> is a free, open sourced, and mobile-friendly
+        progressive web app that gives students access to all the content from their courses in one place.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"
+        >StudyBuddy: One-stop PWA for University lecture content.</span
+      ><br />
+       Suitable for all Universities in Switzerland, one app for all their chairs to provide the content their students
+      need.
+    </Fragment>
+  </Hero>
+
+  <section class="mx-auto text-center">
+    <div class="mb-24">
+      <h1 class="text-5xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+        A Home for lecture content
+      </h1>
+      <p>
+        <span class="font-semibold text-blue-600">Chairs</span> can <span class="font-semibold text-blue-300"
+          >create and moderate content</span
+        > for their lectures.
+      </p>
+      <p>
+        Choose which of your content is publicly accessible or only to logged in students through the <span
+          class="font-semibold text-blue-300">protection feature</span
+        >.
+      </p><p>
+        Work privately on your content and release when ready thorugh the <span class="font-semibold text-blue-300"
+          >publish feature</span
+        >.
+      </p><p>
+        Upload your slides and integrate them through the <span class="font-semibold text-blue-300">PDF Manager</span>.
+      </p><p>
+        Embed videos from external ressources like <a
+          href="https://www.switch.ch/de/cast"
+          class="underline font-semibold text-green-600">Switch Cast</a
+        > to integrate lecture <span class="font-semibold text-blue-300">Podcasts</span>.
+      </p><p>
+        Embed ich interactive content like <span class="font-semibold text-blue-300"
+          >Quizzes, Flashcards, Questionnaires</span
+        > through <a
+          href="https://h5p.org/content-types-and-applications"
+          class="underline font-semibold text-green-600">h5p</a
+        >.
+      </p><p>Send <span class="font-semibold text-blue-300">Push Notifications</span> to users of the app.</p>
+      <div class="mx-auto text-center text-xs">
+        <img src="/images/chair-create-content-demo.avif" alt="PWA Demo" class="mx-auto mt-6 mb-2" />
+        <p>Chair Content Creation Demo</p>
+      </div>
+    </div>
+    <div>
+      <h1 class="text-5xl md:text-2xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+        All in one place
+      </h1>
+      <p>
+        <span class="font-semibold text-blue-600">Students</span> can access the content of all their lectures in <span
+          class="font-semibold text-blue-300">one single place</span
+        > .
+      </p><p>
+        Simply install StudyBuddy on <any class="font-semibold text-blue-300">any mobile device</any> with your
+        webbrowser.
+      </p><p>
+        Log in with your <span class="font-semibold text-blue-300">already existing Edu-ID</span> to additionally get
+        access to all protected ressources:
+      </p>
+
+      <img src="/images/mobile_demo_720p.avif" alt="PWA Demo" class="mx-auto mt-6 mb-2" />
+      <p class="mx-auto text-center text-xs">Student PWA Demo</p>
+    </div>
+  </section>
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with StudyBuddy"
+    subtitle="A comprehensive progressive web apps developed by the RWF E-Learning Team of the University of Zurich."
+    items={[
+      {
+        title: 'Mobile PWA',
+        description: 'No App Store, no problem. This app can be installed on any mobile device with a web browser.',
+        icon: 'tabler:brand-appstore',
+      },
+      {
+        title: 'Switch Edu-ID integration',
+        description:
+          'With Edu-ID, you can unlock all of the protected content in a snap. No need to create new accounts or remember passwords. Just use the same Edu-ID you already have and enjoy the benefits.',
+        icon: 'tabler:login',
+      },
+      {
+        title: 'Chair Content Moderation',
+        description:
+          'Your content, your way. Each chair has its own web browser account to upload and manage their content.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Push Notifications',
+        description:
+          'Stay in touch with all students through push notifications. Each chair can use their web browser account to send one.',
+        icon: 'tabler:notification',
+      },
+      {
+        title: 'One Admin Account',
+        description:
+          'Manage your chairs with ease using our web interface. Create, update or delete chairs as you wish with just a few clicks.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Protected Content',
+        description:
+          'Share your slides with ease and security. You have the option to protect your content and allow only logged-in students to access it.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+</Layout>
